@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hackathon/pages/help_list_page.dart';
+import 'package:flutter_hackathon/styles/colors.dart';
 import 'package:flutter_hackathon/styles/text.dart';
 
 class MissionDetailsOne extends StatelessWidget {
@@ -59,9 +61,62 @@ class MissionDetaisFour extends StatelessWidget {
       padding: const EdgeInsets.all(64),
       child: Container(
         child: Center(
-          child: Text(
-            'Seja bem vindo à Resistência',
-            style: TypographyStyle.textTitleTheme,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Seja bem vindo à Resistência',
+                style: TypographyStyle.textTitleTheme,
+              ),
+              SizedBox(
+                height: 68,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => HelpListPage()));
+                },
+                child: Container(
+                  height: 48,
+                  width: 248,
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        border: Border.all(
+                          color: ColorStyles.lighBlue,
+                        ),
+                        gradient: LinearGradient(
+                          colors: [
+                            ColorStyles.lightPurple,
+                            ColorStyles.backgroundColor
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        )),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'BORA LÁ',
+                            style: TypographyStyle.textTitleTheme
+                                .copyWith(fontSize: 18),
+                          ),
+                        )),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.check,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),

@@ -7,4 +7,5 @@ class ColorStyles {
   static Color lightPurple = Color.fromRGBO(161, 85, 185, 1);
   static Color lightPink = Color.fromRGBO(247, 101, 163, 1);
   static Color primaryTextColor = Color.fromRGBO(237, 214, 255, 1);
+  static Color lighBlue = Color.fromRGBO(16, 255, 241, 1);
 }

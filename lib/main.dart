@@ -8,13 +8,20 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   final missionDetails = [
     MissionDetailsOne(),
     MissionDetailsTwo(),
     MissionDetailsThree(),
     MissionDetaisFour()
   ];
+
+  bool isReady = false;
 
   @override
   Widget build(BuildContext context) {
