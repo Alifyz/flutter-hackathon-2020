@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hackathon/styles/colors.dart';
+import 'package:flutter_hackathon/styles/text.dart';
 import 'package:flutter_hackathon/styles/theme.dart';
 
 void main() {
@@ -18,7 +19,12 @@ class MyApp extends StatelessWidget {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
+              children: [
+                Text(
+                  'Testing',
+                  style: TypographyStyle.textTitleTheme,
+                )
+              ],
             ),
           ),
         ),
