@@ -5,15 +5,15 @@ import 'package:flutter_hackathon/styles/theme.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(HomePage());
 }
 
-class MyApp extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _HomePageState extends State<HomePage> {
   final missionDetails = [
     MissionDetailsOne(),
     MissionDetailsTwo(),
