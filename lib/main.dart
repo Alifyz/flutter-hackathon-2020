@@ -21,8 +21,6 @@ class _HomePageState extends State<HomePage> {
     MissionDetaisFour()
   ];
 
-  bool isReady = false;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
