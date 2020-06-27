@@ -58,27 +58,32 @@ class MissionDetaisFour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(64),
+      padding: const EdgeInsets.all(16),
       child: Container(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset(
+                'images/logo-min.png',
+                width: 389,
+                height: 283,
+              ),
               Text(
                 'Seja bem vindo à Resistência',
                 style: TypographyStyle.textTitleTheme,
               ),
               SizedBox(
-                height: 68,
+                height: 48,
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => HelpListPage()));
-                },
-                child: Container(
-                  height: 48,
-                  width: 248,
+              Container(
+                height: 48,
+                width: 248,
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => HelpListPage()));
+                  },
                   child: Ink(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
