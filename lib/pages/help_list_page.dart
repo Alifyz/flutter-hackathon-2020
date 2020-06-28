@@ -32,7 +32,7 @@ class _HelpListPageState extends State<HelpListPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  'PEDIDOS DE SOCORRO',
+                  'HELP LIST',
                   style: TypographyStyle.textTitleTheme,
                 ),
                 Expanded(
