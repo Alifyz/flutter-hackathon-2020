@@ -79,50 +79,68 @@ class MissionDetaisFour extends StatelessWidget {
               Container(
                 height: 48,
                 width: 248,
-                child: FlatButton(
-                  onPressed: () {
+                child: FuturisticButton(
+                  label: 'START',
+                  onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => HelpListPage()));
                   },
-                  child: Ink(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
-                        border: Border.all(
-                          color: ColorStyles.lighBlue,
-                        ),
-                        gradient: LinearGradient(
-                          colors: [
-                            ColorStyles.lightPurple,
-                            ColorStyles.backgroundColor
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        )),
-                    child: Row(
-                      children: [
-                        Expanded(
-                            child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            'BORA LÁ',
-                            style: TypographyStyle.textTitleTheme
-                                .copyWith(fontSize: 18),
-                          ),
-                        )),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.check,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ),
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class FuturisticButton extends StatelessWidget {
+  const FuturisticButton({
+    Key key,
+    this.label,
+    this.onTap,
+  }) : super(key: key);
+
+  final String label;
+  final Function onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (_) => HelpListPage()));
+      },
+      child: Ink(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(8)),
+            border: Border.all(
+              color: ColorStyles.lighBlue,
+            ),
+            gradient: LinearGradient(
+              colors: [ColorStyles.lightPurple, ColorStyles.backgroundColor],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            )),
+        child: Row(
+          children: [
+            Expanded(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                label.toUpperCase(),
+                style: TypographyStyle.textTitleTheme.copyWith(fontSize: 18),
+              ),
+            )),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(
+                Icons.check,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
     );
