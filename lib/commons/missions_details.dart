@@ -108,10 +108,7 @@ class FuturisticButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => HelpListPage()));
-      },
+      onPressed: onTap,
       child: Ink(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(8)),

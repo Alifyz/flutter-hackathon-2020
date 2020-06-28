@@ -3,6 +3,8 @@ import 'package:flutter_hackathon/commons/custom_divider.dart';
 import 'package:flutter_hackathon/commons/custom_text_field.dart';
 import 'package:flutter_hackathon/commons/missions_details.dart';
 import 'package:flutter_hackathon/commons/utils.dart';
+import 'package:flutter_hackathon/models/request_model.dart';
+import 'package:flutter_hackathon/stores/app_store.dart';
 import 'package:flutter_hackathon/styles/colors.dart';
 import 'package:flutter_hackathon/styles/text.dart';
 
@@ -28,6 +30,8 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
   final phoneController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
+
+  final store = AppStore();
 
   @override
   Widget build(BuildContext context) {
@@ -180,12 +184,38 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                       Flexible(
                         flex: 3,
                         child: FuturisticButton(
-                          onTap: () {},
+                          onTap: () {
+                            if (_formKey.currentState.validate()) {
+                              final title = titleController.text;
+                              final description = descriptionController.text;
+                              final name = nameController.text;
+                              final addres = addressController.text;
+                              final phone = phoneController.text;
+                              final requestType = requestValue;
+
+                              final request = RequestModel(
+                                title: title,
+                                description: description,
+                                name: name,
+                                address: addres,
+                                phone: phone,
+                                type: requestType,
+                                isForMyself: isThirdPartyRequest,
+                              );
+
+                              store.addRequest(request);
+
+                              Navigator.pop(context);
+                            }
+                          },
                           label: 'SAVE',
                         ),
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 32,
+                  )
                 ],
               ),
             ),

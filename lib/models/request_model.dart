@@ -7,7 +7,7 @@ class RequestModel {
   final String phone;
   final bool isForMyself;
 
-  RequestModel(
+  RequestModel({
     this.title,
     this.description,
     this.name,
@@ -15,5 +15,5 @@ class RequestModel {
     this.address,
     this.phone,
     this.isForMyself,
-  );
+  });
 }

@@ -21,6 +21,13 @@ class CustomTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8),
       child: TextFormField(
+        validator: (currentValue) {
+          if (currentValue.isEmpty || currentValue.length < 5) {
+            return 'You should write something here';
+          } else {
+            return null;
+          }
+        },
         minLines: lines,
         maxLines: lines * 2,
         style: TypographyStyle.defaultTextTheme,
