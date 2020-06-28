@@ -8,11 +8,13 @@ class HelpItemWidget extends StatelessWidget {
     this.label,
     this.description,
     this.type,
+    this.points = 'New Mission',
   }) : super(key: key);
 
   final String label;
   final String description;
   final String type;
+  final String points;
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +77,7 @@ class HelpItemWidget extends StatelessWidget {
                         height: 4,
                       ),
                       Text(
-                        'New Mission',
+                        points,
                         style: TextStyle(color: ColorStyles.primaryTextColor),
                       )
                     ],

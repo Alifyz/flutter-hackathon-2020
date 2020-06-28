@@ -89,6 +89,8 @@ class MainContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _appState = Provider.of<ApplicationModel>(context);
+
     if (page == 0) {
       if (appState.requests.isEmpty) {
         return EmptyState();
@@ -96,7 +98,41 @@ class MainContent extends StatelessWidget {
         return HelpListWidget(appState: appState);
       }
     } else if (page == 1) {
-      return Container();
+      return Padding(
+        padding: const EdgeInsets.only(top: 56),
+        child: Center(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  'MISSION HISTORY',
+                  style: TypographyStyle.textTitleTheme,
+                ),
+              ),
+              Text(
+                'PEOPLE THAT YOU HELPED!',
+                style: TypographyStyle.defaultTextTheme,
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: _appState.completedMissions.length,
+                  itemBuilder: (context, index) {
+                    RequestModel currentMission =
+                        _appState.completedMissions[index];
+                    return HelpItemWidget(
+                      type: currentMission.type,
+                      label: currentMission.title,
+                      description: currentMission.description,
+                      points: '25 PTS',
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
+        ),
+      );
     } else {
       return ProfileWidget();
     }
