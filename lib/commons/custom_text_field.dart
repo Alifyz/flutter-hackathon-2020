@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hackathon/styles/colors.dart';
+import 'package:flutter_hackathon/styles/text.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -22,7 +23,7 @@ class CustomTextField extends StatelessWidget {
       child: TextFormField(
         minLines: lines,
         maxLines: lines * 2,
-        style: TextStyle(color: ColorStyles.primaryTextColor),
+        style: TypographyStyle.defaultTextTheme,
         decoration: InputDecoration(
           prefixIcon: icon,
           filled: true,

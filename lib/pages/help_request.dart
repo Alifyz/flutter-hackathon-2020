@@ -18,6 +18,12 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
     'images/food.png',
   ];
 
+  bool isThirdPartyRequest = false;
+  final requestDescription = [
+    'O PEDIDO É PARA OUTRA PESSOA',
+    'O PEDIDO É PARA MIM'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,12 +39,20 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                 style: TypographyStyle.textTitleTheme,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Switch(value: false, onChanged: (value) {}),
+                  Switch(
+                      value: isThirdPartyRequest,
+                      onChanged: (value) {
+                        setState(() {
+                          isThirdPartyRequest = value;
+                        });
+                      }),
                   Text(
-                    'O Pedido é para outra pessoa'.toUpperCase(),
-                    style: TextStyle(color: ColorStyles.primaryTextColor),
+                    isThirdPartyRequest
+                        ? requestDescription[0]
+                        : requestDescription[1],
+                    style: TypographyStyle.defaultTextTheme,
                   )
                 ],
               ),
@@ -86,7 +100,8 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                           iconDisabledColor: ColorStyles.primaryTextColor,
                           focusColor: Color.fromRGBO(255, 255, 255, 0.83),
                           dropdownColor: ColorStyles.backgroundColor,
-                          style: TextStyle(color: ColorStyles.primaryTextColor),
+                          style: TypographyStyle.defaultTextTheme
+                              .copyWith(fontSize: 17),
                           value: requestValue,
                           items: requestType
                               .map((e) => DropdownMenuItem<String>(
@@ -102,7 +117,27 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                     ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              CustomTextField(
+                label: 'Endereço',
+                icon: Icon(
+                  Icons.home,
+                  color: ColorStyles.primaryTextColor,
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              CustomTextField(
+                label: 'Telefone',
+                icon: Icon(
+                  Icons.phone,
+                  color: ColorStyles.primaryTextColor,
+                ),
+              ),
             ],
           ),
         ),

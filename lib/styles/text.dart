@@ -14,4 +14,8 @@ class TypographyStyle {
     fontSize: 28,
     color: ColorStyles.primaryTextColor,
   );
+
+  static TextStyle defaultTextTheme = GoogleFonts.shareTech(
+    color: ColorStyles.primaryTextColor,
+  );
 }
