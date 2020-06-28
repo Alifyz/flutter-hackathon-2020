@@ -3,10 +3,11 @@ import 'package:flutter_hackathon/commons/custom_divider.dart';
 import 'package:flutter_hackathon/commons/custom_text_field.dart';
 import 'package:flutter_hackathon/commons/missions_details.dart';
 import 'package:flutter_hackathon/commons/utils.dart';
+import 'package:flutter_hackathon/models/application_model.dart';
 import 'package:flutter_hackathon/models/request_model.dart';
-import 'package:flutter_hackathon/stores/app_store.dart';
 import 'package:flutter_hackathon/styles/colors.dart';
 import 'package:flutter_hackathon/styles/text.dart';
+import 'package:provider/provider.dart';
 
 class HelpRequestPage extends StatefulWidget {
   @override
@@ -31,10 +32,20 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
 
   final _formKey = GlobalKey<FormState>();
 
-  final store = AppStore();
+  @override
+  void dispose() {
+    titleController.dispose();
+    descriptionController.dispose();
+    nameController.dispose();
+    addressController.dispose();
+    phoneController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    final _appState = Provider.of<ApplicationModel>(context);
+
     return Scaffold(
       backgroundColor: ColorStyles.backgroundColor,
       body: SingleChildScrollView(
@@ -203,7 +214,7 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                                 isForMyself: isThirdPartyRequest,
                               );
 
-                              store.addRequest(request);
+                              _appState.addRequest(request);
 
                               Navigator.pop(context);
                             }

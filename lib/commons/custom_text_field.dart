@@ -21,6 +21,7 @@ class CustomTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8),
       child: TextFormField(
+        controller: controller,
         validator: (currentValue) {
           if (currentValue.isEmpty || currentValue.length < 5) {
             return 'You should write something here';
