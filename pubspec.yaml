@@ -56,6 +56,10 @@ flutter:
     - images/food.png
     - images/medicine.png
     - images/clothe.png
+    - images/city.png
+    - images/homeless.png
+    - images/help.png
+    - images/empty.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

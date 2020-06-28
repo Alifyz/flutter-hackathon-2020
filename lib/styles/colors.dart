@@ -10,4 +10,5 @@ class ColorStyles {
   static Color lighBlue = Color.fromRGBO(16, 255, 241, 1);
   static Color gray = Color.fromRGBO(154, 174, 193, 1);
   static Color actionColor = Color.fromRGBO(16, 255, 241, 1);
+  static Color lightWhite = Color.fromRGBO(255, 255, 255, 0.18);
 }

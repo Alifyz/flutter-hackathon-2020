@@ -7,14 +7,23 @@ class MissionDetailsOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(64),
-      child: Container(
-        child: Center(
-          child: Text(
-            'Estava tudo indo bem, Até que um novo vírus surgiu Ele adoeceu e matou milhares de pessoas no mundo todo',
-            style: TypographyStyle.textTitleTheme,
+      padding: const EdgeInsets.only(left: 8, right: 8),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('images/city.png'),
+          SizedBox(
+            height: 16,
           ),
-        ),
+          Container(
+            child: Center(
+              child: Text(
+                'Estava tudo indo bem, Até que um novo vírus surgiu Ele adoeceu e matou milhares de pessoas no mundo todo',
+                style: TypographyStyle.textTitleTheme,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -24,14 +33,20 @@ class MissionDetailsTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(64),
-      child: Container(
-        child: Center(
-          child: Text(
-            'Com a economia abalada, muitos passam necessidade de coisas muito básicas',
-            style: TypographyStyle.textTitleTheme,
+      padding: const EdgeInsets.only(left: 8, right: 8),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('images/homeless.png'),
+          Container(
+            child: Center(
+              child: Text(
+                'Com a economia abalada, muitos passam necessidade de coisas muito básicas',
+                style: TypographyStyle.textTitleTheme,
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -41,14 +56,20 @@ class MissionDetailsThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(64),
-      child: Container(
-        child: Center(
-          child: Text(
-            'E foi aí que surgiu uma esperança, começamos a cuidar melhor uns dos outros e formar alianças',
-            style: TypographyStyle.textTitleTheme,
+      padding: const EdgeInsets.only(left: 8, right: 8),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('images/help.png'),
+          Container(
+            child: Center(
+              child: Text(
+                'E foi aí que surgiu uma esperança, começamos a cuidar melhor uns dos outros e formar alianças',
+                style: TypographyStyle.textTitleTheme,
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

@@ -81,9 +81,112 @@ class MainContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (page == 0) {
-      return HelpListWidget(appState: appState);
+      if (appState.requests.isEmpty) {
+        return Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'images/empty.png',
+                width: 196,
+                height: 196,
+              ),
+              Text(
+                'Nothing found, try to add a new help request',
+                style: TypographyStyle.defaultTextTheme.copyWith(fontSize: 21),
+              )
+            ],
+          ),
+        );
+      } else {
+        return HelpListWidget(appState: appState);
+      }
     } else {
-      return Container();
+      return Padding(
+        padding: const EdgeInsets.only(top: 56),
+        child: Center(
+          child: Column(
+            children: [
+              Container(
+                width: 156,
+                height: 156,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(96),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  'HELPER 101',
+                  style: TypographyStyle.textTitleTheme
+                      .copyWith(color: ColorStyles.actionColor),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 56,
+                  decoration: BoxDecoration(color: ColorStyles.lightWhite),
+                  child: Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Icon(
+                        Icons.verified_user,
+                      ),
+                    ),
+                    Text(
+                      'PROFILE',
+                      style: TypographyStyle.textTitleTheme.copyWith(
+                          color: ColorStyles.actionColor, fontSize: 21),
+                    ),
+                  ]),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 56,
+                  decoration: BoxDecoration(color: ColorStyles.lightWhite),
+                  child: Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Icon(
+                        Icons.verified_user,
+                      ),
+                    ),
+                    Text(
+                      'HELPS SENT',
+                      style: TypographyStyle.textTitleTheme.copyWith(
+                          color: ColorStyles.actionColor, fontSize: 21),
+                    ),
+                  ]),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 56,
+                  decoration: BoxDecoration(color: ColorStyles.lightWhite),
+                  child: Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Icon(
+                        Icons.verified_user,
+                      ),
+                    ),
+                    Text(
+                      'LOG OUT',
+                      style: TypographyStyle.textTitleTheme.copyWith(
+                          color: ColorStyles.actionColor, fontSize: 21),
+                    ),
+                  ]),
+                ),
+              )
+            ],
+          ),
+        ),
+      );
     }
   }
 }
