@@ -9,4 +9,5 @@ class ColorStyles {
   static Color primaryTextColor = Color.fromRGBO(237, 214, 255, 1);
   static Color lighBlue = Color.fromRGBO(16, 255, 241, 1);
   static Color gray = Color.fromRGBO(154, 174, 193, 1);
+  static Color actionColor = Color.fromRGBO(16, 255, 241, 1);
 }
