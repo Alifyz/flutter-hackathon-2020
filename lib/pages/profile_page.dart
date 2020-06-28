@@ -43,10 +43,13 @@ class ProfilePage extends StatelessWidget {
                     padding: const EdgeInsets.all(16),
                     child: Image.asset('images/profile.png'),
                   ),
-                  Text(
-                    'PROFILE',
-                    style: TypographyStyle.textTitleTheme
-                        .copyWith(color: ColorStyles.actionColor, fontSize: 21),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8),
+                    child: Text(
+                      'PROFILE',
+                      style: TypographyStyle.textTitleTheme.copyWith(
+                          color: ColorStyles.actionColor, fontSize: 21),
+                    ),
                   ),
                 ]),
               ),
@@ -58,11 +61,8 @@ class ProfilePage extends StatelessWidget {
                 decoration: BoxDecoration(color: ColorStyles.lightWhite),
                 child: Row(children: [
                   Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Icon(
-                      Icons.verified_user,
-                    ),
-                  ),
+                      padding: const EdgeInsets.all(16),
+                      child: Image.asset('images/contribution.png')),
                   Text(
                     'HELPS SENT',
                     style: TypographyStyle.textTitleTheme
@@ -79,9 +79,7 @@ class ProfilePage extends StatelessWidget {
                 child: Row(children: [
                   Padding(
                     padding: const EdgeInsets.all(16),
-                    child: Icon(
-                      Icons.verified_user,
-                    ),
+                    child: Image.asset('images/logout.png'),
                   ),
                   Text(
                     'LOG OUT',
