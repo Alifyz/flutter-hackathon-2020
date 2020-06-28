@@ -6,10 +6,20 @@ class ApplicationModel with ChangeNotifier {
   final completedMissions = [
     RequestModel(
       title: 'Buy medicine for my children',
-      description:
-          'Since the crisis, I am unable to buy medicine for my two kids.',
+      description: 'Buy medicine for those in need.',
       type: 'MEDICINE',
-    )
+    ),
+    RequestModel(
+      title: 'Buy food for poor families',
+      description: 'Help poor families to afford basic food and suppliers.',
+      type: 'FOOD',
+    ),
+    RequestModel(
+      title: 'Buy clothe for homeless',
+      description:
+          'Help homeless people to afford clothe to support the winter.',
+      type: 'CLOTHE',
+    ),
   ];
 
   void addRequest(RequestModel model) {
