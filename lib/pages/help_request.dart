@@ -15,14 +15,11 @@ class HelpRequestPage extends StatefulWidget {
 }
 
 class _HelpRequestPageState extends State<HelpRequestPage> {
-  final requestType = ['COMIDA', 'ROUPAS', 'MEDICAMENTOS'];
-  String requestValue = 'COMIDA';
+  final requestType = ['FOOD', 'CLOTHE', 'MEDICINE'];
+  String requestValue = 'FOOD';
 
   bool isThirdPartyRequest = false;
-  final requestDescription = [
-    'O PEDIDO É PARA OUTRA PESSOA',
-    'O PEDIDO É PARA MIM'
-  ];
+  final requestDescription = ['IT IS FOR SOMEONE ELSE', 'IT IS FOR ME'];
 
   final titleController = TextEditingController();
   final descriptionController = TextEditingController();
@@ -58,7 +55,7 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'NOVO PEDIDO DE SOCORRO',
+                    'NEW HELP REQUEST',
                     style: TypographyStyle.textTitleTheme,
                   ),
                   Row(
@@ -81,11 +78,11 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                   ),
                   FormDivider(),
                   CustomTextField(
-                    label: 'Título do pedido',
+                    label: 'TITLE',
                     controller: titleController,
                   ),
                   CustomTextField(
-                    label: 'Descrição do pedido',
+                    label: 'DESCRIPTION',
                     lines: 4,
                     controller: descriptionController,
                   ),
@@ -95,7 +92,7 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                   FormDivider(),
                   CustomTextField(
                     controller: nameController,
-                    label: 'nome',
+                    label: 'NAME',
                     icon: Icon(
                       Icons.supervised_user_circle,
                       color: ColorStyles.primaryTextColor,
@@ -148,7 +145,7 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                     height: 8,
                   ),
                   CustomTextField(
-                    label: 'Endereço',
+                    label: 'ADDRESS',
                     controller: addressController,
                     icon: Icon(
                       Icons.home,
@@ -159,7 +156,7 @@ class _HelpRequestPageState extends State<HelpRequestPage> {
                     height: 8,
                   ),
                   CustomTextField(
-                    label: 'Telefone',
+                    label: 'PHONE',
                     controller: phoneController,
                     icon: Icon(
                       Icons.phone,

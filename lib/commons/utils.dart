@@ -1,16 +1,16 @@
 String getImagePath(String selectedType) {
   switch (selectedType) {
-    case 'COMIDA':
+    case 'FOOD':
       {
         return 'images/food.png';
       }
       break;
-    case 'ROUPAS':
+    case 'CLOTHE':
       {
         return 'images/clothe.png';
       }
       break;
-    case 'MEDICAMENTOS':
+    case 'MEDICINE':
       {
         return 'images/medicine.png';
       }
