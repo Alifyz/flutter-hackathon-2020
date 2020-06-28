@@ -22,6 +22,40 @@ class _HelpListPageState extends State<HelpListPage> {
                   'PEDIDOS DE SOCORRO',
                   style: TypographyStyle.textTitleTheme,
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(255, 255, 255, 0.18),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(4),
+                      ),
+                    ),
+                    height: 96,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset('images/food.png'),
+                            ),
+                            Column(
+                              children: [
+                                Text('Título do pedido'),
+                                Text('descrição do pedido')
+                              ],
+                            ),
+                            Column(
+                              children: [Icon(Icons.star)],
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                )
               ],
             ),
           ),
