@@ -24,6 +24,7 @@ class _HelpListPageState extends State<HelpListPage> {
                 context, MaterialPageRoute(builder: (_) => HelpRequestPage()));
           },
           child: Icon(Icons.add),
+          backgroundColor: ColorStyles.lightPurple,
         ),
         body: Padding(
           padding: const EdgeInsets.only(top: 56),

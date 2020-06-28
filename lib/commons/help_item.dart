@@ -69,6 +69,7 @@ class HelpItemWidget extends StatelessWidget {
                       Icon(
                         Icons.star_border,
                         color: Colors.white,
+                        size: 36,
                       ),
                       SizedBox(
                         height: 4,
