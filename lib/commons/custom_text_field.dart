@@ -7,11 +7,13 @@ class CustomTextField extends StatelessWidget {
     this.label,
     this.controller,
     this.lines = 1,
+    this.icon,
   }) : super(key: key);
 
   final String label;
   final TextEditingController controller;
   final int lines;
+  final Icon icon;
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +24,18 @@ class CustomTextField extends StatelessWidget {
         maxLines: lines * 2,
         style: TextStyle(color: ColorStyles.primaryTextColor),
         decoration: InputDecoration(
+          prefixIcon: icon,
           filled: true,
           hintStyle: TextStyle(color: ColorStyles.primaryTextColor),
           focusColor: Colors.white,
           focusedBorder: OutlineInputBorder(
-              borderSide:
-                  BorderSide(color: Colors.white, style: BorderStyle.solid)),
+            borderSide:
+                BorderSide(color: Colors.white, style: BorderStyle.solid),
+          ),
           enabledBorder: OutlineInputBorder(
-              borderSide:
-                  BorderSide(color: Colors.white, style: BorderStyle.solid)),
+            borderSide:
+                BorderSide(color: Colors.white, style: BorderStyle.solid),
+          ),
           fillColor: Color.fromRGBO(255, 255, 255, 0.18),
           hintText: label.toUpperCase(),
           border: OutlineInputBorder(
