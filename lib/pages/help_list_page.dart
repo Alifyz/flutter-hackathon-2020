@@ -22,7 +22,7 @@ class HelpListPage extends StatelessWidget {
           ),
           Container(
             color: Colors.black54,
-          )
+          ),
         ],
       ),
     );
