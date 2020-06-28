@@ -44,6 +44,7 @@ class _HelpListPageState extends State<HelpListPage> {
                         return HelpItemWidget(
                           label: currentRequest.title,
                           description: currentRequest.description,
+                          type: currentRequest.type,
                         );
                       }),
                 ),

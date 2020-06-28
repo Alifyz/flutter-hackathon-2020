@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hackathon/commons/utils.dart';
 import 'package:flutter_hackathon/styles/colors.dart';
 
 class HelpItemWidget extends StatelessWidget {
@@ -33,9 +34,10 @@ class HelpItemWidget extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Image.asset(
-                    'images/food.png',
+                    getImagePath(type),
                     width: 48,
                     height: 48,
+                    color: Colors.white,
                   ),
                 ),
                 Expanded(
@@ -44,13 +46,17 @@ class HelpItemWidget extends StatelessWidget {
                     children: [
                       Text(
                         label.toUpperCase(),
-                        style: TextStyle(color: ColorStyles.primaryTextColor),
+                        style: TextStyle(
+                            color: ColorStyles.primaryTextColor,
+                            fontWeight: FontWeight.bold),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 4),
                         child: Text(
                           description.toUpperCase(),
-                          style: TextStyle(color: ColorStyles.primaryTextColor),
+                          style: TextStyle(
+                              color: ColorStyles.primaryTextColor,
+                              fontSize: 12),
                         ),
                       )
                     ],
@@ -68,7 +74,7 @@ class HelpItemWidget extends StatelessWidget {
                         height: 4,
                       ),
                       Text(
-                        '3 dias atrás',
+                        'New Mission',
                         style: TextStyle(color: ColorStyles.primaryTextColor),
                       )
                     ],
