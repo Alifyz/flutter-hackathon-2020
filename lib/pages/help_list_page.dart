@@ -39,6 +39,15 @@ class _HelpListPageState extends State<HelpListPage> {
                       color: ColorStyles.actionColor,
                     ))),
             BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home,
+                  color: ColorStyles.actionColor,
+                ),
+                title: Text('Missions',
+                    style: TypographyStyle.defaultTextTheme.copyWith(
+                      color: ColorStyles.actionColor,
+                    ))),
+            BottomNavigationBarItem(
               icon: Icon(
                 Icons.verified_user,
                 color: ColorStyles.actionColor,
@@ -59,7 +68,7 @@ class _HelpListPageState extends State<HelpListPage> {
                 context, MaterialPageRoute(builder: (_) => HelpRequestPage()));
           },
           child: Icon(Icons.add),
-          backgroundColor: ColorStyles.lightPurple,
+          backgroundColor: ColorStyles.gray,
         ),
         body: MainContent(
           appState: appState,
@@ -82,112 +91,139 @@ class MainContent extends StatelessWidget {
   Widget build(BuildContext context) {
     if (page == 0) {
       if (appState.requests.isEmpty) {
-        return Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'images/empty.png',
-                width: 196,
-                height: 196,
-              ),
-              Text(
-                'Nothing found, try to add a new help request',
-                style: TypographyStyle.defaultTextTheme.copyWith(fontSize: 21),
-              )
-            ],
-          ),
-        );
+        return EmptyState();
       } else {
         return HelpListWidget(appState: appState);
       }
+    } else if (page == 1) {
+      return Container();
     } else {
-      return Padding(
-        padding: const EdgeInsets.only(top: 56),
-        child: Center(
-          child: Column(
-            children: [
-              Container(
-                width: 156,
-                height: 156,
-                decoration: BoxDecoration(
+      return ProfileWidget();
+    }
+  }
+}
+
+class ProfileWidget extends StatelessWidget {
+  const ProfileWidget({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 56),
+      child: Center(
+        child: Column(
+          children: [
+            Container(
+              width: 156,
+              height: 156,
+              decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(96),
-                ),
+                  border: Border.all(
+                    color: ColorStyles.actionColor,
+                  )),
+              child: Image.asset('images/avatar.png'),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Text(
+                'HELPER 101',
+                style: TypographyStyle.textTitleTheme
+                    .copyWith(color: ColorStyles.actionColor),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text(
-                  'HELPER 101',
-                  style: TypographyStyle.textTitleTheme
-                      .copyWith(color: ColorStyles.actionColor),
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 56,
+                decoration: BoxDecoration(color: ColorStyles.lightWhite),
+                child: Row(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Icon(
+                      Icons.verified_user,
+                    ),
+                  ),
+                  Text(
+                    'PROFILE',
+                    style: TypographyStyle.textTitleTheme
+                        .copyWith(color: ColorStyles.actionColor, fontSize: 21),
+                  ),
+                ]),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 56,
-                  decoration: BoxDecoration(color: ColorStyles.lightWhite),
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Icon(
-                        Icons.verified_user,
-                      ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 56,
+                decoration: BoxDecoration(color: ColorStyles.lightWhite),
+                child: Row(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Icon(
+                      Icons.verified_user,
                     ),
-                    Text(
-                      'PROFILE',
-                      style: TypographyStyle.textTitleTheme.copyWith(
-                          color: ColorStyles.actionColor, fontSize: 21),
-                    ),
-                  ]),
-                ),
+                  ),
+                  Text(
+                    'HELPS SENT',
+                    style: TypographyStyle.textTitleTheme
+                        .copyWith(color: ColorStyles.actionColor, fontSize: 21),
+                  ),
+                ]),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 56,
-                  decoration: BoxDecoration(color: ColorStyles.lightWhite),
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Icon(
-                        Icons.verified_user,
-                      ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 56,
+                decoration: BoxDecoration(color: ColorStyles.lightWhite),
+                child: Row(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Icon(
+                      Icons.verified_user,
                     ),
-                    Text(
-                      'HELPS SENT',
-                      style: TypographyStyle.textTitleTheme.copyWith(
-                          color: ColorStyles.actionColor, fontSize: 21),
-                    ),
-                  ]),
-                ),
+                  ),
+                  Text(
+                    'LOG OUT',
+                    style: TypographyStyle.textTitleTheme
+                        .copyWith(color: ColorStyles.actionColor, fontSize: 21),
+                  ),
+                ]),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 56,
-                  decoration: BoxDecoration(color: ColorStyles.lightWhite),
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Icon(
-                        Icons.verified_user,
-                      ),
-                    ),
-                    Text(
-                      'LOG OUT',
-                      style: TypographyStyle.textTitleTheme.copyWith(
-                          color: ColorStyles.actionColor, fontSize: 21),
-                    ),
-                  ]),
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
-      );
-    }
+      ),
+    );
+  }
+}
+
+class EmptyState extends StatelessWidget {
+  const EmptyState({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'images/empty.png',
+            width: 196,
+            height: 196,
+          ),
+          Text(
+            'Nothing found, try to add a new help request',
+            style: TypographyStyle.defaultTextTheme.copyWith(fontSize: 21),
+          )
+        ],
+      ),
+    );
   }
 }
 
