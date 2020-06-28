@@ -18,7 +18,7 @@ class MissionDetailsOne extends StatelessWidget {
           Container(
             child: Center(
               child: Text(
-                'Estava tudo indo bem, Até que um novo vírus surgiu Ele adoeceu e matou milhares de pessoas no mundo todo',
+                'Everything was going well, until a new virus started to spread.',
                 style: TypographyStyle.textTitleTheme,
               ),
             ),
@@ -41,7 +41,7 @@ class MissionDetailsTwo extends StatelessWidget {
           Container(
             child: Center(
               child: Text(
-                'Com a economia abalada, muitos passam necessidade de coisas muito básicas',
+                'People got really sick, the economy was shattered.',
                 style: TypographyStyle.textTitleTheme,
               ),
             ),
@@ -64,7 +64,7 @@ class MissionDetailsThree extends StatelessWidget {
           Container(
             child: Center(
               child: Text(
-                'E foi aí que surgiu uma esperança, começamos a cuidar melhor uns dos outros e formar alianças',
+                'Now, people are jobless, and need basic things like food, medicine and clothe.',
                 style: TypographyStyle.textTitleTheme,
               ),
             ),
@@ -91,7 +91,7 @@ class MissionDetaisFour extends StatelessWidget {
                 height: 283,
               ),
               Text(
-                'Seja bem vindo à Resistência',
+                'Help us to change this, Welcome to the resistence!',
                 style: TypographyStyle.textTitleTheme,
               ),
               SizedBox(
