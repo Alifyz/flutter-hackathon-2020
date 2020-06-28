@@ -3,6 +3,8 @@ import 'package:flutter_hackathon/commons/help_item.dart';
 import 'package:flutter_hackathon/models/application_model.dart';
 import 'package:flutter_hackathon/models/request_model.dart';
 import 'package:flutter_hackathon/pages/help_request.dart';
+import 'package:flutter_hackathon/pages/mission_page.dart';
+import 'package:flutter_hackathon/pages/profile_page.dart';
 import 'package:flutter_hackathon/styles/colors.dart';
 import 'package:flutter_hackathon/styles/text.dart';
 import 'package:provider/provider.dart';
@@ -98,142 +100,10 @@ class MainContent extends StatelessWidget {
         return HelpListWidget(appState: appState);
       }
     } else if (page == 1) {
-      return Padding(
-        padding: const EdgeInsets.only(top: 56),
-        child: Center(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text(
-                  'MISSION HISTORY',
-                  style: TypographyStyle.textTitleTheme,
-                ),
-              ),
-              Text(
-                'PEOPLE THAT YOU HELPED!',
-                style: TypographyStyle.defaultTextTheme,
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: _appState.completedMissions.length,
-                  itemBuilder: (context, index) {
-                    RequestModel currentMission =
-                        _appState.completedMissions[index];
-                    return HelpItemWidget(
-                      type: currentMission.type,
-                      label: currentMission.title,
-                      description: currentMission.description,
-                      points: '25 PTS',
-                    );
-                  },
-                ),
-              )
-            ],
-          ),
-        ),
-      );
+      return MissionPage(appState: _appState);
     } else {
-      return ProfileWidget();
+      return ProfilePage();
     }
-  }
-}
-
-class ProfileWidget extends StatelessWidget {
-  const ProfileWidget({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 56),
-      child: Center(
-        child: Column(
-          children: [
-            Container(
-              width: 156,
-              height: 156,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(96),
-                  border: Border.all(
-                    color: ColorStyles.actionColor,
-                  )),
-              child: Image.asset('images/avatar.png'),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                'HELPER 101',
-                style: TypographyStyle.textTitleTheme
-                    .copyWith(color: ColorStyles.actionColor),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 56,
-                decoration: BoxDecoration(color: ColorStyles.lightWhite),
-                child: Row(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Icon(
-                      Icons.verified_user,
-                    ),
-                  ),
-                  Text(
-                    'PROFILE',
-                    style: TypographyStyle.textTitleTheme
-                        .copyWith(color: ColorStyles.actionColor, fontSize: 21),
-                  ),
-                ]),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 56,
-                decoration: BoxDecoration(color: ColorStyles.lightWhite),
-                child: Row(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Icon(
-                      Icons.verified_user,
-                    ),
-                  ),
-                  Text(
-                    'HELPS SENT',
-                    style: TypographyStyle.textTitleTheme
-                        .copyWith(color: ColorStyles.actionColor, fontSize: 21),
-                  ),
-                ]),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 56,
-                decoration: BoxDecoration(color: ColorStyles.lightWhite),
-                child: Row(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Icon(
-                      Icons.verified_user,
-                    ),
-                  ),
-                  Text(
-                    'LOG OUT',
-                    style: TypographyStyle.textTitleTheme
-                        .copyWith(color: ColorStyles.actionColor, fontSize: 21),
-                  ),
-                ]),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
   }
 }
 
