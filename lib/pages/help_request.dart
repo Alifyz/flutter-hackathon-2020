@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hackathon/commons/custom_text_field.dart';
 import 'package:flutter_hackathon/styles/colors.dart';
 import 'package:flutter_hackathon/styles/text.dart';
 
@@ -8,7 +9,7 @@ class HelpRequestPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: ColorStyles.backgroundColor,
       body: Padding(
-        padding: const EdgeInsets.only(top: 48),
+        padding: const EdgeInsets.only(top: 48, left: 32, right: 32),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,17 +28,36 @@ class HelpRequestPage extends StatelessWidget {
                   )
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 32, right: 32),
-                child: Divider(
-                  color: Color.fromRGBO(255, 255, 255, 0.6),
-                  thickness: 1.5,
-                ),
+              FormDivider(),
+              CustomTextField(
+                label: 'Título do pedido',
               ),
+              CustomTextField(
+                label: 'Descrição do pedido',
+                lines: 4,
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              FormDivider(),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class FormDivider extends StatelessWidget {
+  const FormDivider({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Divider(
+      color: Color.fromRGBO(255, 255, 255, 0.6),
+      thickness: 1.5,
     );
   }
 }
