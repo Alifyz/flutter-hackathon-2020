@@ -6,39 +6,26 @@
 
 
 <p align="center">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tincidunt sapien. Nulla vestibulum mauris ut ligula tempor, molestie vulputate libero semper. In quam leo, hendrerit vel commodo eget, efficitur ut augue. 
+  Estava tudo indo bem
 </p>
+
+
+## Figma
+
+Todos os componentes e protótipos foram desenhados no Figma.
+
+<p align="center">
+<img src="https://github.com/gstvinf/flutter-hackathon-2020/blob/master/images/figma.png?raw=true" alt="Figma" height="100%" width="100%"></img>
+</p>
+
 
 ## Features :gem:
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tincidunt sapien. Nulla vestibulum mauris ut ligula tempor, molestie vulputate libero semper. In quam leo, hendrerit vel commodo eget, efficitur ut augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam consequat justo at quam eleifend, nec ornare orci mattis. Quisque eleifend scelerisque dui sit amet tincidunt. Nunc a tincidunt magna. Nullam sem elit, vehicula eget ipsum in, dapibus ultrices lacus. Nunc fringilla odio vitae quam viverra condimentum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tincidunt sapien. Nulla vestibulum mauris ut ligula tempor, molestie vulputate libero semper. In quam leo, hendrerit vel commodo eget, efficitur ut augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam consequat justo at quam eleifend, nec ornare orci mattis. Quisque eleifend scelerisque dui sit amet tincidunt. Nunc a tincidunt magna. Nullam sem elit, vehicula eget ipsum in, dapibus ultrices lacus. Nunc fringilla odio vitae quam viverra condimentum.
-
-![MOCK]
+Ajude as pessoas, veja a lista de pedidos de ajuda. 
 
 
-
-### Give Help :heart: 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tincidunt sapien. Nulla vestibulum mauris ut ligula tempor, molestie vulputate libero semper. In quam leo, hendrerit vel commodo eget, efficitur ut augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam consequat justo at quam eleifend, nec ornare orci mattis. Quisque eleifend scelerisque dui sit amet tincidunt. Nunc a tincidunt magna. Nullam sem elit, vehicula eget ipsum in, dapibus ultrices lacus. Nunc fringilla odio vitae quam viverra condimentum.
-
-
-![MOCK]
-
-### Ask Help :broken_heart: 
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id tincidunt sapien. Nulla vestibulum mauris ut ligula tempor, molestie vulputate libero semper. In quam leo, hendrerit vel commodo eget, efficitur ut augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam consequat justo at quam eleifend, nec ornare orci mattis. Quisque eleifend scelerisque dui sit amet tincidunt. Nunc a tincidunt magna. Nullam sem elit, vehicula eget ipsum in, dapibus ultrices lacus. Nunc fringilla odio vitae quam viverra condimentum.
-
-
-![MOCK]
-
-
-## Share 
-
-Compartilhe 
+## Share us
+ 
 [<img align="right" title="Share via Email" src="https://docs.cloudposse.com/images/ionicons/ios-email-outline-2.0.1-16x16-999999.svg"/>][share_email]
 [<img align="right" title="Share on Facebook" src="https://docs.cloudposse.com/images/ionicons/social-facebook-outline-2.0.1-16x16-999999.svg" />][share_facebook]
 [<img align="right" title="Share on Reddit" src="https://docs.cloudposse.com/images/ionicons/social-reddit-outline-2.0.1-16x16-999999.svg" />][share_reddit]
@@ -73,6 +60,3 @@ See [LICENSE](LICENSE) for full details.
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/alifyz/flutter-hackathon-2020
 [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/alifyz/flutter-hackathon-2020
 [share_email]: mailto:?subject=Flutter+Hackathon&body=https://github.com/alifyz/flutter-hackathon-2020
-
-[MOCK]: https://raw.githubusercontent.com/flutter/website/master/src/_assets/image/tools/android-studio/hot-reload.gif
-
