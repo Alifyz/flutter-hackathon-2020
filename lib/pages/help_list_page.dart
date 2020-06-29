@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hackathon/commons/help_item.dart';
 import 'package:flutter_hackathon/models/application_model.dart';
 import 'package:flutter_hackathon/models/request_model.dart';
+import 'package:flutter_hackathon/pages/empty_page.dart';
 import 'package:flutter_hackathon/pages/help_request.dart';
 import 'package:flutter_hackathon/pages/mission_page.dart';
 import 'package:flutter_hackathon/pages/profile_page.dart';
@@ -95,7 +96,7 @@ class MainContent extends StatelessWidget {
 
     if (page == 0) {
       if (appState.requests.isEmpty) {
-        return EmptyState();
+        return EmptyPage();
       } else {
         return HelpListWidget(appState: appState);
       }
@@ -104,33 +105,6 @@ class MainContent extends StatelessWidget {
     } else {
       return ProfilePage();
     }
-  }
-}
-
-class EmptyState extends StatelessWidget {
-  const EmptyState({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            'images/empty.png',
-            width: 196,
-            height: 196,
-          ),
-          Text(
-            'Nothing found\ntry to add a new help request',
-            textAlign: TextAlign.center,
-            style: TypographyStyle.defaultTextTheme.copyWith(fontSize: 21),
-          )
-        ],
-      ),
-    );
   }
 }
 
