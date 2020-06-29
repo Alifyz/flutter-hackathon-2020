@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/Alifyz/flutter-hackathon-2020/blob/master/images/logo-min.png?raw=true" alt="logo" height="50%" width="50%"></img>
+<img src="https://github.com/gstvinf/flutter-hackathon-2020/blob/master/images/logo-background.jpg?raw=true" alt="logo" height="100%" width="100%"></img>
 </p>
 
 <h1 align="center">The ALLIANCE for Help!</h1> 
