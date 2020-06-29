@@ -20,6 +20,7 @@ class MissionDetailsOne extends StatelessWidget {
               child: Text(
                 'Everything was going well, until a new virus started to spread.',
                 style: TypographyStyle.textTitleTheme,
+                textAlign: TextAlign.center,
               ),
             ),
           ),
@@ -43,6 +44,7 @@ class MissionDetailsTwo extends StatelessWidget {
               child: Text(
                 'People got really sick, the economy was shattered.',
                 style: TypographyStyle.textTitleTheme,
+                textAlign: TextAlign.center,
               ),
             ),
           ),
@@ -66,6 +68,7 @@ class MissionDetailsThree extends StatelessWidget {
               child: Text(
                 'Now, people are jobless, and need basic things like food, medicine and clothe.',
                 style: TypographyStyle.textTitleTheme,
+                textAlign: TextAlign.center,
               ),
             ),
           ),
@@ -91,8 +94,9 @@ class MissionDetaisFour extends StatelessWidget {
                 height: 283,
               ),
               Text(
-                'Help us to change this, Welcome to the resistence!',
+                'Help us to change this. Welcome to the resistence!',
                 style: TypographyStyle.textTitleTheme,
+                textAlign: TextAlign.center,
               ),
               SizedBox(
                 height: 48,

@@ -124,7 +124,8 @@ class EmptyState extends StatelessWidget {
             height: 196,
           ),
           Text(
-            'Nothing found, try to add a new help request',
+            'Nothing found\ntry to add a new help request',
+            textAlign: TextAlign.center,
             style: TypographyStyle.defaultTextTheme.copyWith(fontSize: 21),
           )
         ],
