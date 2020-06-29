@@ -2,11 +2,16 @@
 <img src="https://github.com/Alifyz/flutter-hackathon-2020/blob/master/images/logo-min.png?raw=true" alt="logo" height="50%" width="50%"></img>
 </p>
 
-<h1 align="center">Flutter Hackathon</h1>
+<h1 align="center">The ALLIANCE for Help!</h1> 
+ <p align="center">Flutter Hackathon 2020</p>
 
-<p align="center">
-  Estava tudo indo bem
-</p>
+<h3 align="center">
+  A spark of hope. 
+</h3>
+
+<h4 align="center">
+  If you need, ask help. If you can, help someone. 
+</h4>
 
 
 [<img align="right" title="Share via Email" src="https://docs.cloudposse.com/images/ionicons/ios-email-outline-2.0.1-16x16-999999.svg"/>][share_email]
@@ -18,12 +23,15 @@
 
 ## Features :gem:
 
-Ajude as pessoas, veja a lista de pedidos de ajuda. 
+- Create a help request to you or others
+- List all requests
+- Filter requests
+- Answer a help
 
 
 ## Figma :iphone:
 
-Todos os componentes e protótipos foram desenhados no Figma.
+All components and prototypes were created on [Figma][figma_site].
 
 <p align="center">
 <img src="https://github.com/gstvinf/flutter-hackathon-2020/blob/master/images/figma.png?raw=true" alt="Figma" height="100%" width="100%"></img>
@@ -38,7 +46,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## About :sparkles:
 
-**Three Amigos**, se juntaram *(remotamente, claro)* para colocar seus conhecimentos em prática, se divertir enquanto criam um app que irá salvar vidas nesse mundo pós-pandêmico.
+**Three Amigos**, got together *(remotely, of course)* to put their knowledge into practice, have fun while creating an app that will save lives in this post-pandemic world.
 
 ### Contributors 
 |  [![Alify][alify_avatar]][alify_homepage]<br/>[Alify][alify_homepage]<br/> :computer: GODeveloper | [![Gustavo][gustavo_avatar]][gustavo_homepage]<br/>[Gustavo][gustavo_homepage] <br/> :beetle: Bug Hunter |  [![Raul][raul_avatar]][raul_homepage]<br/>[Raul][raul_homepage] <br/> :art: UX / UI |
@@ -56,3 +64,5 @@ See [LICENSE](LICENSE) for full details.
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/alifyz/flutter-hackathon-2020
 [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/alifyz/flutter-hackathon-2020
 [share_email]: mailto:?subject=Flutter+Hackathon&body=https://github.com/alifyz/flutter-hackathon-2020
+
+[figma_site]: https://www.figma.com/file/phNM5dY9Dm2VqJW16HVa2G/Hackathon-Flutter-2020
